@@ -4,6 +4,10 @@
 第一个鸿蒙应用程序
 2、SwitchPage
 页面跳转操作
+3、FirstNative
+第一个native项目
+4、XComponentControllerDemo
+使用XComponentController控件渲染一个五角星
 
 
 问题点汇总：
