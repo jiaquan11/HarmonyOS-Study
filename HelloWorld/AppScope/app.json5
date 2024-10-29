@@ -1,10 +1,14 @@
 {
   "app": {
-    "bundleName": "com.example.helloworld",
-    "vendor": "example",
-    "versionCode": 1000000,
-    "versionName": "1.0.0",
-    "icon": "$media:app_icon",
+    "bundleName": "com.example.helloworld",//应用程序的包名，全局的
+    "vendor": "example",//这是应用程序的供应商或开发者名称。它可以用于标识应用的开发者或公司
+    "versionCode": 1000000,//这是应用程序的版本代码，是一个整数值
+    "versionName": "1.0.0",//应用程序的版本名称，通常采用“主版本号.次版本号.修订号”的格式
+    "icon": "$media:app_icon",//应用程序的图标
+    /**
+     *label:这里的label是应用程序的标签名,必须设置，统一在这里设置，
+     *但是如果在module.json5中又设置了，会导致这里设置不生效
+    */
     "label": "$string:app_name"
   }
 }

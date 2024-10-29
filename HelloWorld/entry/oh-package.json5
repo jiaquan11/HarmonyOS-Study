@@ -1,4 +1,10 @@
 {
+  /**
+  *entry模块
+  *此模块为应用程序的唯一的HAP模块
+  *main:为空，表示entry不需要导出接口
+  *dependencies：依赖模块，当前没有模块依赖
+  */
   "name": "entry",
   "version": "1.0.0",
   "description": "Please describe the basic information.",

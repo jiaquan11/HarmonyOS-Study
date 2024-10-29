@@ -1,20 +1,14 @@
 {
+  /**
+   *应用程序全局的编译配置文件
+   *app配置
+   *compatibleSdkVersion：指定系统SDK的版本
+   *runtimeOS:指定运行的系统
+   *signingConfigs：指定应用签名配置
+   *modules配置
+   *指定了一个模块entry及位置
+  */
   "app": {
-    "signingConfigs": [
-      {
-        "name": "default",
-        "type": "HarmonyOS",
-        "material": {
-          "certpath": "C:\\Users\\admin\\.ohos\\config\\default_HelloWorld_NOsoczN6SHUfIPjmqDSeppBeE6m8fKqQcemZLpUtgGs=.cer",
-          "storePassword": "0000001959AFB5AAED89532E74EBA4388CF3AA77767438F1405F808AED95BF26575895365732DD1C87",
-          "keyAlias": "debugKey",
-          "keyPassword": "00000019AB4F6EE7665039448C5044E8AA95F556257D696A3092987DDBA20C4547AE21D98020F3CC03",
-          "profile": "C:\\Users\\admin\\.ohos\\config\\default_HelloWorld_NOsoczN6SHUfIPjmqDSeppBeE6m8fKqQcemZLpUtgGs=.p7b",
-          "signAlg": "SHA256withECDSA",
-          "storeFile": "C:\\Users\\admin\\.ohos\\config\\default_HelloWorld_NOsoczN6SHUfIPjmqDSeppBeE6m8fKqQcemZLpUtgGs=.p12"
-        }
-      }
-    ],
     "products": [
       {
         "name": "default",
@@ -31,10 +25,25 @@
     ],
     "buildModeSet": [
       {
-        "name": "debug",
+        "name": "debug"
       },
       {
         "name": "release"
+      }
+    ],
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\DELL\\.ohos\\config\\default_HelloWorld_MpFOHX_WPeA1Ov0sDt-E9agSYQ9Uz7hOynxgg8MGIbM=.cer",
+          "storePassword": "0000001BCB08C86FCBB39251264E595A10B658D0C089FC8ECC451BF268E1D2811E22025714AFD8657EE7B5",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BCBF79D019CAE85F6DB9A2DFF69E9805849DA434EECFA9EC202D1F7EF9A9BCF28B2FABBA7DE6F74",
+          "profile": "C:\\Users\\DELL\\.ohos\\config\\default_HelloWorld_MpFOHX_WPeA1Ov0sDt-E9agSYQ9Uz7hOynxgg8MGIbM=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\DELL\\.ohos\\config\\default_HelloWorld_MpFOHX_WPeA1Ov0sDt-E9agSYQ9Uz7hOynxgg8MGIbM=.p12"
+        }
       }
     ]
   },

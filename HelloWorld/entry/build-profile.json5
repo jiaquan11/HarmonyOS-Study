@@ -1,4 +1,8 @@
 {
+  /**
+   *entry模块的编译配置
+   *apiType:接口模式为Stage模式
+   */
   "apiType": "stageMode",
   "buildOption": {
   },
