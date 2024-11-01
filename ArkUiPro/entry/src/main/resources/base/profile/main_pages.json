@@ -1,0 +1,12 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/Page1",
+    "pages/Page2",
+    "pages/Index2",
+    "pages/Test1",
+    "components/HeaderComponent",
+    "pages/TestState",
+    "pages/StateSample"
+  ]
+}

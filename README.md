@@ -8,7 +8,8 @@
 第一个native项目
 4、XComponentControllerDemo
 使用XComponentController控件渲染一个五角星
-
+5、ArkUiPro项目
+ArkUi的基本组件的demo
 
 问题点汇总：
 1、
