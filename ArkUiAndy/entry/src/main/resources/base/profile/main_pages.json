@@ -4,6 +4,7 @@
     "pages/TextExample1",
     "pages/ImageExamplePage",
     "pages/ButtonDemo",
-    "pages/TextInputDemo"
+    "pages/TextInputDemo",
+    "pages/TextAreaDemo"
   ]
 }
