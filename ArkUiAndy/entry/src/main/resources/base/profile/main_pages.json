@@ -1,6 +1,7 @@
 {
   "src": [
     "pages/Index",
-    "pages/TextExample1"
+    "pages/TextExample1",
+    "pages/ImageExamplePage"
   ]
 }
