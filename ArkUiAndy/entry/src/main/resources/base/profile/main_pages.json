@@ -6,6 +6,7 @@
     "pages/ButtonDemo",
     "pages/TextInputDemo",
     "pages/TextAreaDemo",
-    "pages/RadioDemo"
+    "pages/RadioDemo",
+    "pages/CheckboxDemo"
   ]
 }
