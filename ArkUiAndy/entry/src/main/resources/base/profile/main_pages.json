@@ -7,6 +7,24 @@
     "pages/TextInputDemo",
     "pages/TextAreaDemo",
     "pages/RadioDemo",
-    "pages/CheckboxDemo"
+    "pages/CheckboxDemo",
+    "pages/ToggleDemo",
+    "pages/ProgressDemo",
+    "pages/SlideDemo",
+    "pages/TextPickerDemo",
+    "pages/DatePickerDemo",
+    "pages/TimePickerDemo",
+    "pages/StepperDemo",
+    "pages/BlankDemo",
+    "pages/ImageAnimatorDemo",
+    "pages/MarqueeDemo",
+    "pages/SpanDemo",
+    "pages/CheckboxGroupDemo",
+    "pages/SelectDemo",
+    "pages/RatingDemo",
+    "pages/DividerDemo",
+    "pages/SwiperDemo",
+    "pages/TabsDemo",
+    "pages/TabsDemo2"
   ]
 }
