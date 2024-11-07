@@ -7,6 +7,15 @@
     "pages/Test1",
     "components/HeaderComponent",
     "pages/TestState",
-    "pages/StateSample"
+    "pages/StateSample",
+    "pages/WelcomPage",
+    "pages/LoginPage",
+    "pages/FlexPage",
+    "pages/FlexDemoPage",
+    "pages/SwipperPage",
+    "pages/AxiosDemoPage",
+    "pages/MusicDemoPage",
+    "pages/RefreshDemoPage",
+    "pages/PropDemoPage"
   ]
 }

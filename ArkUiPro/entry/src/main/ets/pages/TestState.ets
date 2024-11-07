@@ -9,10 +9,11 @@
  */
 //学生类
 class Student {
-  sname:string
-  age:number
-  gf?:Student
-  constructor(sname: string, age: number, gf?:Student) {
+  sname: string
+  age: number
+  gf?: Student
+
+  constructor(sname: string, age: number, gf?: Student) {
     this.sname = sname
     this.age = age
     this.gf = gf
@@ -25,19 +26,18 @@ struct TestState {
   // @State message: string = 'Hello World';
   // @State age:number = 18
   // @State isMan:boolean = true;
-  @State stu:Student = new Student('张三', 20, new Student('刘大美',18))
-
+  @State stu: Student = new Student('张三', 20, new Student('刘大美', 18))
   idx = 0
-  @State gfs:Student[] = [
+  @State gfs: Student[] = [
     new Student('刘大美', 18),
-    new Student('李晓丽',19)
+    new Student('李晓丽', 19)
   ]
 
   build() {
     Column() {
-      Text(`${this.stu.sname}:${this.stu.age }`)
+      Text(`${this.stu.sname}:${this.stu.age}`)
         .fontSize(30)
-        .onClick(()=>{
+        .onClick(() => {
           // this.message = 'hello!!!'
           // this.age++
           // this.isMan = false
@@ -53,26 +53,26 @@ struct TestState {
 
       Text(`${this.stu.gf?.sname ?? '未知'}: ${this.stu.gf?.age ?? '未知'}`)
         .fontSize(30)
-        .onClick(()=>{
+        .onClick(() => {
           // this.message = 'hello!!!'
           // this.age++
           // this.isMan = false
           if (this.stu.gf) {
-            this.stu.gf.age++;//在这里无法触发当前的视图更新
+            this.stu.gf.age++; //在这里无法触发当前的视图更新
           }
         })
 
       Button('添加女友')
-        .onClick(()=>{
-          this.gfs.push(new Student('女友'+this.idx++, 20))
+        .onClick(() => {
+          this.gfs.push(new Student('女友' + this.idx++, 20))
         })
 
       ForEach(
         this.gfs,
-        (item:Student, index)=>{
+        (item: Student, index) => {
           Text(item.sname + ':' + item.age)
             .fontSize(30)
-            .onClick(()=>{
+            .onClick(() => {
               item.age++ //数组中的对象属性无法触发视图更新
             })
         }

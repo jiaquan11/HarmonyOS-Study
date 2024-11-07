@@ -17,7 +17,8 @@ class Item {
 }
 
 //自定义构建函数:全局的
-@Builder function MyBuilderFunction(item:Item) {
+@Builder
+function MyBuilderFunction(item: Item) {
   Row({ space: 10 }) { //商品部分1
     Image(item.image)
       .width('35%') //商品图片
@@ -51,7 +52,8 @@ class Item {
 }
 
 //全局的样式函数
-@Styles function myStylesFunction() {
+@Styles
+function myStylesFunction() {
   .width('100%')
   .height('100%')
   .backgroundColor('#EFEFEF')
@@ -59,7 +61,8 @@ class Item {
 }
 
 //针对扩展某个单一组件的样式，必须使用@Extend,不能使用@Styles,只能全局
-@Extend(Text) function priceStyle(size:number, color:string) {
+@Extend(Text)
+function priceStyle(size: number, color: string) {
   .fontSize(size)
   .fontWeight(FontWeight.Bold)
   .fontColor(color)
@@ -84,8 +87,8 @@ struct Index2 {
   build() {
     Column() {
 
-      Header({title:'出货列表'})//自定义组件
-        .margin({bottom:30})
+      Header({ title: '出货列表' })//自定义组件
+        .margin({ bottom: 30 })
 
       List({ space: 10 }) {
         //循环渲染，通过数据源去渲染组件，子组件必须可以被包含在父组件中
@@ -93,7 +96,7 @@ struct Index2 {
           this.items, //数据源
           (item: Item) => {
             ListItem() { //list组件中必须要有子组件，ListItem中只有一个根组件
-              this.MyBuilderFunction1(item);//自定义的局部构建函数
+              this.MyBuilderFunction1(item); //自定义的局部构建函数
               // MyBuilderFunction(item);//自定义的全局构建函数
             }
           }
@@ -112,27 +115,28 @@ struct Index2 {
   }
 
   //局部的自定义构建函数,必须在component的struct组件里面
-  @Builder MyBuilderFunction1(item: Item){
-    Row({space:10}){  //商品部分1
+  @Builder
+  MyBuilderFunction1(item: Item) {
+    Row({ space: 10 }) { //商品部分1
       Image(item.image)
-        .width('35%')//商品图片
-      Column(){
-        if(item.discount){  //判断,如果非0 就是true 如果商品有打折,4个text组件
+        .width('35%') //商品图片
+      Column() {
+        if (item.discount) { //判断,如果非0 就是true 如果商品有打折,4个text组件
           Text(item.name)
             .fontSize(20)
             .fontWeight(FontWeight.Bold)
-          Text('原价¥  '+ item.price)
+          Text('原价¥  ' + item.price)
             .fontSize(18)
             .fontColor('#F36')
-            .decoration({type:TextDecorationType.LineThrough})
-          Text('折后价¥ '+ (item.price-item.discount))
+            .decoration({ type: TextDecorationType.LineThrough })
+          Text('折后价¥ ' + (item.price - item.discount))
             .priceStyle(18, '#F36')
-          Text('补贴¥ '+ item.discount)
+          Text('补贴¥ ' + item.discount)
             .priceStyle(30, '#36D')
-        }else{ //商品不打折,2个text组件
+        } else { //商品不打折,2个text组件
           Text(item.name)
             .priceStyle(18, '#F36')
-          Text('¥ '+ item.price)
+          Text('¥ ' + item.price)
             .priceStyle(18, '#F36')
         }
       }.height('100%')
@@ -144,10 +148,11 @@ struct Index2 {
   }
 
   //局部的样式函数
-  @Styles myStylesFunction1() {
-  .width('100%')
-  .height('100%')
-  .backgroundColor('#EFEFEF')
-  .padding(20)
-}
+  @Styles
+  myStylesFunction1() {
+    .width('100%')
+    .height('100%')
+    .backgroundColor('#EFEFEF')
+    .padding(20)
+  }
 }

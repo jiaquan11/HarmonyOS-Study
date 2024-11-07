@@ -7,8 +7,9 @@
 @Component
 export struct Header { //自定义组件,可复用ui单元
   private title: ResourceStr = ''
+
   build() {
-    Row({space:10}) { //title部分
+    Row({ space: 10 }) { //title部分
       Image($r('app.media.ic_public_back'))
         .width(30)
         .interpolation(ImageInterpolation.High)

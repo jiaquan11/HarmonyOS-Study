@@ -12,6 +12,9 @@
 ArkUi的基本组件的demo
 6、ts-pro项目
 ts相关的语法知识
+7、ArkTsGrammar项目
+ArkTs的基础语法
+
 
 问题点汇总：
 1、

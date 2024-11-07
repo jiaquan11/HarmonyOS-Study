@@ -22,7 +22,7 @@ struct Page2 {
        * 注意：Colomn和Row的主轴和交叉轴刚好是相反的
        */
       // .justifyContent(FlexAlign.SpaceAround)//主轴方向布局的对齐格式
-      .alignItems(VerticalAlign.Center)//交叉轴方向布局的对齐方式
+      .alignItems(VerticalAlign.Center) //交叉轴方向布局的对齐方式
       Text('元素三')
         .fontSize(40)
         .fontColor('#36D')

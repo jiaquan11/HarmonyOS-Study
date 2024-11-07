@@ -19,7 +19,7 @@ struct Page1 {
       .width('100%')
       .height(300)
       // .justifyContent(FlexAlign.SpaceAround)//主轴方向布局的对齐格式
-      .alignItems(HorizontalAlign.Start)//交叉轴方向布局的对齐方式
+      .alignItems(HorizontalAlign.Start) //交叉轴方向布局的对齐方式
       Text('元素三')
         .fontSize(40)
         .fontColor('#36D')
