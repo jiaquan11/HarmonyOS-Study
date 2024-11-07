@@ -1,0 +1,49 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\DELL\\.ohos\\config\\default_MusicPlayerProject_Q60Tn05RwwjJdFGdwNwtGXe0twUgyGk5OryrKmV2vIc=.cer",
+          "storePassword": "0000001B360B56D1E6EB2E99C1BEFEAE547DB6D2FF2A80BE948A92D98CE4B0599A833EC9E9B599CB5082B3",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BA8DC6CB4609B17FF06B157E84039C61B1C0A6017B130EC9BA6A296C4F61CB7382FF36FBE8C97C2",
+          "profile": "C:\\Users\\DELL\\.ohos\\config\\default_MusicPlayerProject_Q60Tn05RwwjJdFGdwNwtGXe0twUgyGk5OryrKmV2vIc=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\DELL\\.ohos\\config\\default_MusicPlayerProject_Q60Tn05RwwjJdFGdwNwtGXe0twUgyGk5OryrKmV2vIc=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "runtimeOS": "HarmonyOS",
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    }
+  ]
+}

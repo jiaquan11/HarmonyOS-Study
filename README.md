@@ -14,7 +14,8 @@ ArkUi的基本组件的demo
 ts相关的语法知识
 7、ArkTsGrammar项目
 ArkTs的基础语法
-
+8、MusicPlayerProject
+一个音频播放的简单页面布局和播放的操作
 
 问题点汇总：
 1、

@@ -6,8 +6,7 @@ import { JSON } from '@kit.ArkTS';
 @Component
 export struct AxiosDemoPage {
   @State message: string = 'Hello World';
-  url: string =
-    'https://www.yyq.cn/api/getPlayData?playid=4926%2C4925%2C4924%2C4923%2C4922%2C4921%2C4920%2C4919%2C4918%2C4917%2C4916%2C4915&typeid=3'
+  url: string = 'https://www.yyq.cn/api/getPlayData?playid=4926%2C4925%2C4924%2C4923%2C4922%2C4921%2C4920%2C4919%2C4918%2C4917%2C4916%2C4915&typeid=3'
   @State songs: Song[] = []
 
   //支持async/await用法
