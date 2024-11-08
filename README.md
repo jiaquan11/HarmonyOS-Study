@@ -14,8 +14,11 @@ ArkUi的基本组件的demo
 ts相关的语法知识
 7、ArkTsGrammar项目
 ArkTs的基础语法
-8、MusicPlayerProject
+8、MusicPlayerProject项目
 一个音频播放的简单页面布局和播放的操作
+9、ClientCloudTest项目
+实现端云一体化的测试代码，包括云函数，云数据库，云认证，云存储
+
 
 问题点汇总：
 1、

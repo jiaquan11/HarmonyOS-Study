@@ -1,0 +1,18 @@
+{
+  "objectTypeName": "Student",
+  "fields": [
+    {"fieldName": "stu_id", "fieldType": "Integer", "notNull": true, "belongPrimaryKey": true},
+    {"fieldName": "stuName", "fieldType": "String", "notNull": true, "defaultValue": 0},
+    {"fieldName": "stuSex", "fieldType": "String"},
+    {"fieldName": "stuBir", "fieldType": "String"}
+  ],
+  "indexes": [
+    {"indexName": "idx_stu_id", "indexList": [{"fieldName":"stu_id","sortType":"ASC"}]},
+  ],
+  "permissions": [
+    {"role": "World", "rights": ["Read"]},
+    {"role": "Authenticated", "rights": ["Read", "Upsert"]},
+    {"role": "Creator", "rights": ["Read", "Upsert", "Delete"]},
+    {"role": "Administrator", "rights": ["Read", "Upsert", "Delete"]}
+  ]
+}

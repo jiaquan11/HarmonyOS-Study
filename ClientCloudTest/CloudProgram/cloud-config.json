@@ -1,0 +1,19 @@
+{
+  "appSelected": {
+    "appId": "5765880207855876511",
+    "appName": "ClientCloudTest",
+    "deviceTypes": [
+      {
+        "appAdapters": "4,5",
+        "deviceType": 4
+      }
+    ],
+    "enableSites": "CN",
+    "installationFree": 0,
+    "packageType": 7,
+    "projectId": "461323198428995255",
+    "projectName": "鸿蒙端云一体化测试",
+    "siteId": "CN"
+  },
+  "teamId": "420086000301726412"
+}

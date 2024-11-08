@@ -1,0 +1,30 @@
+{
+  "cloudDBZoneName": "cloudDBZoneName1",
+  "objectTypeName": "Student",
+  "objects": [
+    {
+      "stu_id": 1,
+      "stuName": "ken",
+      "stuSex": "男",
+      "stuBir": "2000-12-12"
+    },
+    {
+      "stu_id": 2,
+      "stuName": "jetty",
+      "stuSex": "男",
+      "stuBir": "1990-12-12"
+    },
+    {
+      "stu_id": 3,
+      "stuName": "路哥",
+      "stuSex": "男",
+      "stuBir": "2001-12-12"
+    },
+    {
+      "stu_id": 4,
+      "stuName": "vicent",
+      "stuSex": "男",
+      "stuBir": "2004-12-12"
+    }
+  ]
+}

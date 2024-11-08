@@ -1,0 +1,13 @@
+{
+  "src": [
+    "pages/Index",
+    "pages/CloudDb/CloudDb",
+    "pages/CloudFunction",
+    "pages/CloudStorage",
+    "pages/CloudDb/DbInsert",
+    "pages/CloudFunctionPage",
+    "pages/TextPage",
+    "pages/LoginPage",
+    "pages/CloudStoragePage"
+  ]
+}
