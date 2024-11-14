@@ -1,0 +1,5 @@
+export { MainPage } from './src/main/ets/components/MainPage'
+export {Log} from './src/main/ets/test'
+export {func} from './src/main/ets/test'
+export {func2} from './src/main/ets/test'
+export {nativeAdd} from './src/main/ets/utils/nativeTest'

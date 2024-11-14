@@ -1,10 +1,5 @@
 import { router } from '@kit.ArkUI';
-
-// 定义 RouterError 接口
-interface RouterError {
-  code: string; // 假设错误代码是字符串类型
-  message: string;
-}
+import { BusinessError } from '@kit.BasicServicesKit';
 
 @Entry
 @Component
@@ -37,7 +32,7 @@ struct Index {
           //跳转到第二页
           router.pushUrl({url:'pages/Second'}).then(() => {
             console.info(`Succeeded in jumping to the second page.`)
-          }).catch((err : RouterError) => {
+          }).catch((err : BusinessError) => {
             console.error(`Failed to jump to the second page.Code is ${err.code}, message is ${err.message}`)
           })
         })

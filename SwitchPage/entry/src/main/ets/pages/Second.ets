@@ -28,7 +28,7 @@ struct Second {
           console.info(`Succeeded in clicking the 'Back' button.`)
           try {
             //返回第一页
-            router.back()
+            router.back()//路由返回
             console.info('Succeeded in returning to the first page.')
           } catch (err) {
              console.error(`Failed to return to the first page.Code is ${err.code}, message is ${err.message}`)

@@ -1,0 +1,59 @@
+{
+  "app": {
+    "signingConfigs": [
+      {
+        "name": "default",
+        "type": "HarmonyOS",
+        "material": {
+          "certpath": "C:\\Users\\DELL\\.ohos\\config\\default_HarUseDemo_fXjbiN31GWwu_o3XB4akH-uf7yY9Z_P4R-uJeNz_kKY=.cer",
+          "storePassword": "0000001BB752A701C922A81013EC8EDE4918C34690B72D236026196D5BA7EA9977D7B7CEE1BE6E1AC1CAAE",
+          "keyAlias": "debugKey",
+          "keyPassword": "0000001BDBA9F8F62F6BCD612815FDDF79551470168D848E97B8D302E5AD613CAC7FD6D3F626C7F10FB9AF",
+          "profile": "C:\\Users\\DELL\\.ohos\\config\\default_HarUseDemo_fXjbiN31GWwu_o3XB4akH-uf7yY9Z_P4R-uJeNz_kKY=.p7b",
+          "signAlg": "SHA256withECDSA",
+          "storeFile": "C:\\Users\\DELL\\.ohos\\config\\default_HarUseDemo_fXjbiN31GWwu_o3XB4akH-uf7yY9Z_P4R-uJeNz_kKY=.p12"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "default",
+        "signingConfig": "default",
+        "compatibleSdkVersion": "5.0.0(12)",
+        "runtimeOS": "HarmonyOS",
+        "buildOption": {
+          "strictMode": {
+            "caseSensitiveCheck": true,
+            "useNormalizedOHMUrl": true
+          }
+        }
+      }
+    ],
+    "buildModeSet": [
+      {
+        "name": "debug",
+      },
+      {
+        "name": "release"
+      }
+    ]
+  },
+  "modules": [
+    {
+      "name": "entry",
+      "srcPath": "./entry",
+      "targets": [
+        {
+          "name": "default",
+          "applyToProducts": [
+            "default"
+          ]
+        }
+      ]
+    },
+    {
+      "name": "library",
+      "srcPath": "./library",
+    }
+  ]
+}
