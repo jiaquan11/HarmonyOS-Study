@@ -1,0 +1,1 @@
+export const multi: (a: number, b: number) => number;

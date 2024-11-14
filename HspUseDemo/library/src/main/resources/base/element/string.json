@@ -1,0 +1,24 @@
+{
+  "string": [
+    {
+      "name": "shared_desc",
+      "value": "description"
+    },
+    {
+      "name": "library_title",
+      "value": "hsp use"
+    },
+    {
+      "name": "shared_desc_hsp",
+      "value": "shared_desc_hsp description"
+    },
+    {
+      "name": "back_to_HAP",
+      "value": "BackToHAP"
+    },
+    {
+      "name": "back_to_HSP",
+      "value": "BackToHSP"
+    }
+  ]
+}
