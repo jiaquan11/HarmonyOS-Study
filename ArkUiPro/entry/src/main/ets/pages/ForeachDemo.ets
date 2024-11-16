@@ -6,7 +6,6 @@ class Item {
   image: ResourceStr //图片地址
   price: number //商品价格
   discount: number //商品折扣
-
   //构造函数，用来实例化商品对象,商品打折默认0
   constructor(name: string, image: ResourceStr, price: number, discount: number = 0) {
     this.name = name
@@ -16,9 +15,8 @@ class Item {
   }
 }
 
-//自定义构建函数:全局的
-@Builder
-function MyBuilderFunction(item: Item) {
+//自定义构建函数:全局的,需要在前面添加function
+@Builder function MyBuilderFunction(item: Item) {
   Row({ space: 10 }) { //商品部分1
     Image(item.image)
       .width('35%') //商品图片
@@ -51,18 +49,22 @@ function MyBuilderFunction(item: Item) {
   .height(120)
 }
 
-//全局的样式函数
-@Styles
-function myStylesFunction() {
+/**
+ * 全局的样式函数,@Stytles支持的是通用的属性和组件
+ */
+@Styles function myStylesFunction() {
   .width('100%')
   .height('100%')
   .backgroundColor('#EFEFEF')
   .padding(20)
 }
 
-//针对扩展某个单一组件的样式，必须使用@Extend,不能使用@Styles,只能全局
-@Extend(Text)
-function priceStyle(size: number, color: string) {
+/**
+ *和@Styles不同，@Extend仅支持定义在全局，不支持在组件内部定义
+ * @Extend仅支持全局，用于扩展的是原生组件样式(也就是说是单一组件，需指定，比如Text)
+ * 可以通过参数传递
+ */
+@Extend(Text) function priceStyle(size: number, color: string) {
   .fontSize(size)
   .fontWeight(FontWeight.Bold)
   .fontColor(color)
@@ -70,7 +72,7 @@ function priceStyle(size: number, color: string) {
 
 @Entry
 @Component
-struct Index2 {
+struct ForeachDemo {
   @State message: string = 'Hello World';
   private items: Array<Item> = [
     new Item('华为mateX3', $r('app.media.matex3'), 13888, 1000),
@@ -86,7 +88,6 @@ struct Index2 {
 
   build() {
     Column() {
-
       Header({ title: '出货列表' })//自定义组件
         .margin({ bottom: 30 })
 
@@ -114,9 +115,8 @@ struct Index2 {
     }.myStylesFunction()
   }
 
-  //局部的自定义构建函数,必须在component的struct组件里面
-  @Builder
-  MyBuilderFunction1(item: Item) {
+  //局部的自定义构建函数,必须在component的struct组件里面,不需要加function
+  @Builder MyBuilderFunction1(item: Item) {
     Row({ space: 10 }) { //商品部分1
       Image(item.image)
         .width('35%') //商品图片
@@ -147,9 +147,8 @@ struct Index2 {
     .height(120)
   }
 
-  //局部的样式函数
-  @Styles
-  myStylesFunction1() {
+  //局部的样式函数，同样不需要加function,但是使用的时候需要加this
+  @Styles myStylesFunction1() {
     .width('100%')
     .height('100%')
     .backgroundColor('#EFEFEF')

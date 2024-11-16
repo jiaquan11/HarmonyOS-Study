@@ -3,7 +3,7 @@
  */
 @Entry
 @Component
-export struct Index {
+export struct UserRegist {
   @State message: string = 'Hello World';
   @State salary: number = 12000
 

@@ -1,14 +1,14 @@
 {
   "src": [
-    "pages/Index",
+    "pages/UserRegist",
     "pages/Page1",
     "pages/Page2",
-    "pages/Index2",
-    "pages/Test1",
+    "pages/ForeachDemo",
+    "pages/CustomComponentDemo",
     "components/HeaderComponent",
-    "pages/TestState",
+    "pages/StateDemo2",
     "pages/StateSample",
-    "pages/WelcomPage",
+    "pages/Welcome",
     "pages/LoginPage",
     "pages/FlexPage",
     "pages/FlexDemoPage",
@@ -16,6 +16,13 @@
     "pages/AxiosDemoPage",
     "pages/MusicDemoPage",
     "pages/RefreshDemoPage",
-    "pages/PropDemoPage"
+    "pages/PropDemoPage",
+    "pages/CustomComponentDemo2",
+    "pages/BuilderDemo",
+    "pages/StateDemo",
+    "pages/PageLifeCycle",
+    "pages/PageLifeCycleNext",
+    "pages/ListenPageRouter",
+    "pages/ComponentMeasureLayout"
   ]
 }

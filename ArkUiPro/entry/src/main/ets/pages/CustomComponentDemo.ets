@@ -4,7 +4,6 @@
 @Component
 struct HelloComponent {
   @State message: string = 'Hello, World';
-
   build() {
     //HelloComponent自定义组件组合系统组件Row和Text
     Row() {
@@ -18,9 +17,8 @@ struct HelloComponent {
 
 @Entry
 @Component
-struct Test1 {
+struct CustomComponentDemo {
   @State message: string = 'Hello World';
-
   build() {
     Column() {
       Text('ArkUI Message')

@@ -15,6 +15,7 @@ struct MenuPage {
           //页面路由返回：返回HSP的页面
           router.back({
             url: '@bundle:com.example.hspusedemo/library/ets/pages/BackPage'
+            // url:'pages/BackPage' //这样是错误的
           })
         })
       }

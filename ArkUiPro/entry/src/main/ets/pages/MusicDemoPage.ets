@@ -1,7 +1,7 @@
 import { tabsData } from '../constant/MusicConstants';
 import { TabClass } from '../model';
 import { AxiosDemoPage } from './AxiosDemoPage';
-import { Index } from './Index';
+import { UserRegist } from './UserRegist';
 
 @Entry
 @Component
@@ -41,7 +41,7 @@ struct MusicDemoPage {
         ForEach(tabsData, (item: TabClass, index: number) => {
           TabContent() {
             if (this.currentName == 'recommend') {
-              Index()
+              UserRegist()
             } else if (this.currentName == 'find') {
               AxiosDemoPage()
             } else if (this.currentName == 'home') {

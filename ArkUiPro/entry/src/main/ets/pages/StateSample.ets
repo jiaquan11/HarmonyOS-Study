@@ -1,4 +1,29 @@
 /**
+ * 父子组件传递更新的问题
+ * 详细说明一下@State,@Prop,@Link,@Provide,@Consume的区别
+ * @Prop单向传递
+ * 在父组件中声明一个@State成员变量，在子组件中声明一个同名的@Prop成员变量,
+ * 使用的时候，从父组件传递变量的值到子组件，父组件变量的值的变化更新，会立即自动同步给子组件更新
+ * 注意：@Prop不支持引用对象的传递，只支持普通类型
+ * @Link 双向传递
+ * 在父组件中声明一个@State成员变量，在子组件中声明一个同名的@Link成员变量,
+ * 使用的时候，从父组件传递变量的值到子组件，父组件变量的值的变化更新，会立即自动同步给子组件更新,
+ * 同时子组件变量的值的变化更新，会立即自动同步给父组件更新
+ * 注意：@Link支持引用对象的传递
+ * @Provide,@Consume 双向  相当于广播的形式，性能消耗比较大，不建议使用
+ * 在父组件中声明一个@Provide成员变量，在子组件中声明一个同名的@Consume成员变量,
+ * 使用的时候，不需要进行传值，但是父组件变量的值的变化更新，会立即自动同步给子组件更新,
+ * 同时子组件变量的值的变化更新，会立即自动同步给父组件更新。
+ * 一定要同名才能响应更新
+ *
+ * @Observed和@ObjectLink类装饰器用于在涉及嵌套对象或数组的场景中进行双向数据同步
+ * 用于复杂的属性
+ * @Observed用于在父组件中监测某个嵌套对象或数组，@ObjectLink用于在子组件中修饰同名的对象
+ * 父组件会传递对象到子组件中，实现双向数据同步
+
+ */
+
+/**
  * 一个商品购物车的简单页面
  */
 //商品类
@@ -48,6 +73,7 @@ struct StateSample {
       Title()
       //2.添加商品的按钮
       // Content({totalGoods:$totalGoods,selectedGoods:$selectedGoods})
+      // ContentX({carInfo:$carInfo})  //子组件中的link状态可以支持对象引用传值，实现状态UI更新
       ContentX()
     }
     .width('100%')
@@ -96,7 +122,8 @@ struct ContentX {
   // @Link totalGoods:number
   // //购物车中选中的商品数
   // @Link selectedGoods:number  //@Link可以用于对象
-  @Consume carInfo: CarInfo //子组件中一定要相同命名，才能数据同步
+  //子组件中一定要相同命名，才能数据同步，不需要通过参数传递的方式传值
+  @Consume carInfo: CarInfo
   //购物车商品的数组
   @State goodsList: Goods[] = []
 
@@ -114,7 +141,7 @@ struct ContentX {
         //循环渲染,加载子组件
         ForEach(
           this.goodsList,
-          (item: Goods, index) => {
+          (item: Goods, index:number) => {
             ListItem() {
               GoodsItem({ item: item, onChangeCar: this.changeGoodsList.bind(this) }) //这里要绑定当前this对象
             }

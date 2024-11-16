@@ -2,7 +2,7 @@ import { router } from '@kit.ArkUI'
 
 @Entry
 @Component
-struct WelcomPage {
+struct Welcome {
   //总共5秒钟
   @State time: number = 5
   //定时器的引用
