@@ -23,6 +23,8 @@
     "pages/PageLifeCycle",
     "pages/PageLifeCycleNext",
     "pages/ListenPageRouter",
-    "pages/ComponentMeasureLayout"
+    "pages/ComponentMeasureLayout",
+    "pages/BuilderDemo2",
+    "pages/StylesDemo"
   ]
 }

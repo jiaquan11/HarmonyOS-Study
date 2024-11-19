@@ -1,8 +1,33 @@
+/**
+ * TypeScript语法学习
+ * 环境搭建
+ * 为什么要搭建TypeScript编译环境
+ * 最终还是需要将TypeScript代码编译为JavaScript代码才能在浏览器中运行
+ * TS代码->TSC编译引擎->JS代码
+ * 优势：享受开发时使用TS编写代码带来的好处，同时保证实际运行的效果
+ * 1、全局安装TypeScript编译引擎->注册tsc命令
+ * npm install -g typescript
+ * 2、新增一个ts文件，编写TypeScript代码，执行tsc命令，将ts文件编译为js文件
+ * 3、执行node xxx.js文件，查看运行结果
+ * 
+ * 搭建工程化下的TypeScript自动化编译环境
+ * 基于工程化的TS开发模式(webpack/vite)，TS的编译环境已经内置了，无需手动安装配置，
+ * 通过以下命令即可创建一个最基础的自动化的TS编译环境
+ * npm create vite@latest ts-pro -- --template vanilla-ts
+ * npm create vite@latest 使用最新版本的vite创建项目
+ * ts-pro 项目名称
+ * -- --template vanilla-ts 使用项目使用的模版为原生ts模版
+ * 
+ * 执行命令npm install 可以安装项目依赖模块
+ * 执行命令npm run dev 可以启动项目 同时会生成一个执行网页地址，可以随时查看项目运行效果
+ * 用浏览器打开地址比如：http://localhost:5173/
+ * 随后在src目录下创建main.ts文件，编写TypeScript代码，保存后即可在浏览器中查看运行效果
+ */
+
 //ts数据类型
 //js已有数据类型 number string boolean null undefined 数组
 //ts独有数据类型:联合类型、类型别名、接口 (interface)、字面量类型、泛型、枚举、void、any
 //注意：TypeScript 和 JavaScript 没有整数类型
-
 let count:number = 100
 let msg:string = 'hello'
 let isMan:boolean = true //false
@@ -224,6 +249,8 @@ let button:Button = {
 //const注解用来约束常量的数据类型
 const msg8 = 'hello'
 // msg8 = 'world' //报错，常量不能修改值
+let str11 = 'this is string';//类型推论，str11被推论为string类型
+str11 = 'this is string1';
 
 //类型断言，获取页面中的id为link的a元素，尝试通过点语法获取href属性
 let aLink = document.getElementById('link')
@@ -366,5 +393,5 @@ function printLen<T extends LengthObj>(val:T) {
     console.log(val.length)
 }
 printLen([1,2,3,4,5])
-printLen('h')
+printLen('haa')
 // printLen(100)//报错，泛型约束
